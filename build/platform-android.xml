@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<platform xmlns="http://ns.adobe.com/air/extension/16.0">
+	<!--
+    <packagedDependencies>
+		<packagedDependency>[Tenjin SDK jar]</packagedDependency>
+    </packagedDependencies>
+	
+	 <packagedResources>
+        <packagedResource> 
+            <packageName>io.voodooo.tenjin</packageName> 
+            <folderName>tenjin-res</folderName> 
+        </packagedResource>
+    </packagedResources>
+	-->
+</platform>

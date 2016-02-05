@@ -1,0 +1,32 @@
+<extension xmlns="http://ns.adobe.com/air/extension/16.0">
+	<id>io.voodoo.Tenjin</id>
+	<versionNumber>1.0.0</versionNumber>
+	<platforms>
+		<platform name="iPhone-ARM">
+			<applicationDeployment>
+				<nativeLibrary>libTenjinExtension.a</nativeLibrary>
+				<initializer>TenjinIosExtensionInitializer</initializer>
+				<finalizer>TenjinIosExtensionFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+		<!--
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>Tenjin.jar</nativeLibrary>
+				<initializer>io.voodoo.tenjin.TenjinExtension</initializer>
+				<finalizer>io.voodoo.tenjin.TenjinExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="Android-x86">
+			<applicationDeployment>
+				<nativeLibrary>Tenjin.jar</nativeLibrary>
+				<initializer>io.voodoo.tenjin.TenjinExtension</initializer>
+				<finalizer>io.voodoo.tenjin.TenjinExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		-->
+		<platform name="default">
+			<applicationDeployment/>
+		</platform>
+	</platforms>
+</extension>
