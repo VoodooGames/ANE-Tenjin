@@ -1,0 +1,9 @@
+*.actionScriptProperties
+*.flexLibProperties
+*.project
+*.prefs
+*.classpath
+actionscript/bin
+test/bin-debug
+*.xcuserstate
+*.xcuserdatad
