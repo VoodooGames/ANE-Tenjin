@@ -72,17 +72,27 @@ package io.voodoo.tenjin {
 		 * Sends the given event to Tenjin.
 		 * 
 		 * @param eventName	The name of the event
-		 * @param value		The optional value associated with the event
 		 */
-		public static function sendEvent(eventName:String, value:Object = null):void {
+		public static function sendEvent(eventName:String):void {
 			if(context == null)
 				return;
 			
-			log("Sending event to Tenjin : " + eventName + (value != null ? " (" + value + ")" : ""));
-			if(value == null)
-				context.call(FN_SEND_EVENT, eventName);
-			else
-				context.call(FN_SEND_EVENT_WITH_VALUE, eventName, value);
+			log("Sending event to Tenjin : " + eventName);
+			context.call(FN_SEND_EVENT, eventName);
+		}
+		
+		/**
+		 * Sends the given event to Tenjin.
+		 * 
+		 * @param eventName	The name of the event
+		 * @param value		The value associated with the event
+		 */
+		public static function sendEventWithValue(eventName:String, value:int):void {
+			if(context == null)
+				return;
+			
+			log("Sending event to Tenjin : " + eventName + " (" + value + ")");
+			context.call(FN_SEND_EVENT_WITH_VALUE, eventName, "" + value);
 		}
 		
 		/**
@@ -92,7 +102,7 @@ package io.voodoo.tenjin {
 			if(context == null)
 				return;
 			
-			log("Sending transaction to Tenjin : " + quantity + "x" + productName + " @" + unitPrice + " " + currencyCode);
+			log("Sending transaction to Tenjin : " + quantity + " x " + productName + " @" + unitPrice + " " + currencyCode);
 			context.call(FN_TRANSACTION, productName, currencyCode, quantity, unitPrice);
 		}
 		

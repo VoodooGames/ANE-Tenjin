@@ -4,6 +4,9 @@ package {
 	import flash.text.TextField;
 	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
+	import flash.utils.getTimer;
+	
+	import io.voodoo.tenjin.Tenjin;
 	
 	
 	/**
@@ -12,7 +15,7 @@ package {
 	public class TenjinTest extends Sprite {
 		
 		// PARAMS :
-		private static const TOKEN:String = "YOUR TOKEN";
+		private static const TOKEN:String = "E3OTCZ3UQ1OUEWUD3W9SO8JT6REPCZ5U";
 		
 		
 		// PROPERTIES :
@@ -33,7 +36,7 @@ package {
 		private function initTenjin():void {
 			trace("Init");
 			Tenjin.init(TOKEN);
-		}		
+		}
 		
 		private function sendEvent():void {
 			trace("Send event");
@@ -42,12 +45,12 @@ package {
 		
 		private function sendEventWithValue():void {
 			trace("Send event with value");
-			Tenjin.sendEvent("TestEventWithValue", 10);
+			Tenjin.sendEventWithValue("TestEventWithValue", new Date().time);
 		}
 		
 		private function transaction():void {
 			trace("Transaction");
-			Tenjin.transaction("MyProduct", 10, "USD", 2.5);
+			Tenjin.transaction("MyProduct", "USD", 10, 2.5);
 		}
 		
 		

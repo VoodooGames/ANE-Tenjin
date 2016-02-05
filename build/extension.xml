@@ -2,6 +2,7 @@
 	<id>io.voodoo.Tenjin</id>
 	<versionNumber>1.0.0</versionNumber>
 	<platforms>
+		<!--
 		<platform name="iPhone-ARM">
 			<applicationDeployment>
 				<nativeLibrary>libTenjinExtension.a</nativeLibrary>
@@ -9,7 +10,7 @@
 				<finalizer>TenjinIosExtensionFinalizer</finalizer>
 			</applicationDeployment>
 		</platform>
-		<!--
+		-->
 		<platform name="Android-ARM">
 			<applicationDeployment>
 				<nativeLibrary>Tenjin.jar</nativeLibrary>
@@ -24,7 +25,6 @@
 				<finalizer>io.voodoo.tenjin.TenjinExtension</finalizer>
 			</applicationDeployment>
 		</platform>
-		-->
 		<platform name="default">
 			<applicationDeployment/>
 		</platform>

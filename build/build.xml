@@ -50,13 +50,13 @@
 		
 		<mkdir dir="../bin/android/temp/classes" />
 
-		<javac destdir="../bin/android/temp/classes" includeantruntime="false" target="1.6" source="1.6" fork="yes">
+		<javac destdir="../bin/android/temp/classes" includeantruntime="false" target="1.7" source="1.7" fork="yes">
 			<src path="../android/src" />
 			<classpath>
-				<pathelement location="${flex.sdk}/lib/android/FlashRuntimeExtensions.jar"/>
+				<pathelement location="${air.sdk}/lib/android/FlashRuntimeExtensions.jar"/>
 				<pathelement location="${android.jar}" />
 				
-				<pathelement location="../android/libs/[Tenjin SDK Jar]"/>
+				<pathelement location="../android/lib/tenjin-1.2.0.jar"/>
 			</classpath>
 		</javac>
 		<jar basedir="../bin/android/temp/classes" destfile="../bin/android/${name}.jar"/>
@@ -64,14 +64,15 @@
 		
 		<!-- Copy all JAR dependencies -->
 		<copy todir="../bin/android">
-			<fileset dir="../android/libs" />
+			<fileset dir="../android/lib" />
 		</copy>
 		
 		<!-- Copy resources -->
+<!--
 		<copy todir="../bin/android/tenjin-res">
 			<fileset dir="../android/res"/>
 		</copy>
-		
+-->		
 		<echo message="Done."/>
 	</target>
 	
@@ -87,12 +88,12 @@
             <regexpmapper from=".*src.(.*)\.as" to="\1"/>
         </pathconvert>
 
-        <exec executable="${flex.sdk}/bin/compc${bat.ext}" failonerror="true">
-            <env key="AIR_SDK_HOME" value="${flex.sdk}"/>
+        <exec executable="${air.sdk}/bin/compc${bat.ext}" failonerror="true">
+            <env key="AIR_SDK_HOME" value="${air.sdk}"/>
             <arg line='-source-path ../actionscript/src'/>
             <arg line='-output ../bin/actionscript/${name}.swc'/>
             <arg line='-swf-version=${swf.version}'/>
-            <arg line='-external-library-path+="${flex.sdk}/frameworks/libs/air/airglobal.swc"'/>
+            <arg line='-external-library-path+="${air.sdk}/frameworks/libs/air/airglobal.swc"'/>
             <arg line='-include-classes ${classlist}'/>
         </exec>
 
@@ -111,14 +112,14 @@
 	<!-- Packaging -->
 	<target name="package" description="Create the extension package">
 		<echo message="Packaging the ANE ..."/>
-		<exec executable="${flex.sdk}/bin/adt${bat.ext}" failonerror="true" dir="../bin">
+		<exec executable="${air.sdk}/bin/adt${bat.ext}" failonerror="true" dir="../bin">
             <arg value="-package"/>
             <arg value="-target"/>
             <arg value="ane"/>
             <arg value="${name}.ane"/>
             <arg value="../build/extension.xml"/>
             <arg line="-swc actionscript/${name}.swc"/>
-            <arg line="-platform iPhone-ARM -platformoptions ../build/platform-ios.xml -C ios/ ."/>
+            <!--<arg line="-platform iPhone-ARM -platformoptions ../build/platform-ios.xml -C ios/ ."/>-->
             <arg line="-platform Android-ARM -platformoptions ../build/platform-android.xml -C android/ ."/>
 			<arg line="-platform Android-x86 -platformoptions ../build/platform-android.xml -C android/ ."/>
             <arg line="-platform default -C default/ ."/>
@@ -138,8 +139,8 @@
 	<target name="doc" description="Generate ASDoc">
 		<echo message="Generating asdoc ..."/>
 		<mkdir dir="../doc"/>
-		<exec executable="${flex.sdk}/bin/asdoc${bat.ext}" failonerror="true">
-            <arg line='-load-config="${flex.sdk}/frameworks/airmobile-config.xml"'/>
+		<exec executable="${air.sdk}/bin/asdoc${bat.ext}" failonerror="true">
+            <arg line='-load-config="${air.sdk}/frameworks/airmobile-config.xml"'/>
 			<arg line="-main-title '${name} ANE API Documentation'" />
             <arg line="-window-title '${name} ANE API Documentation'" />
             <arg line="-source-path ../actionscript/src" />
