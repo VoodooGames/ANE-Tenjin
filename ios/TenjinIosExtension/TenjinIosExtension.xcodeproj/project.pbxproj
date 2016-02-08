@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		212E7C301C688F0100848565 /* libTenjinSDKUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 212E7C2E1C688F0100848565 /* libTenjinSDKUniversal.a */; };
+		212E7C321C68900D00848565 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212E7C311C68900D00848565 /* AdSupport.framework */; };
+		212E7C341C68901400848565 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212E7C331C68901400848565 /* StoreKit.framework */; };
+		212E7C361C68901E00848565 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212E7C351C68901E00848565 /* iAd.framework */; };
+		21775B2D1C6500CB00EE4433 /* FRETypeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21775B2C1C6500CB00EE4433 /* FRETypeConverter.m */; };
+		2199BC4E1C64FA730003B5C1 /* TenjinIosExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2199BC4D1C64FA730003B5C1 /* TenjinIosExtension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2199BC461C64FA730003B5C1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		212E7C2E1C688F0100848565 /* libTenjinSDKUniversal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTenjinSDKUniversal.a; sourceTree = "<group>"; };
+		212E7C2F1C688F0100848565 /* TenjinSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenjinSDK.h; sourceTree = "<group>"; };
+		212E7C311C68900D00848565 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		212E7C331C68901400848565 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		212E7C351C68901E00848565 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		21775B2B1C6500CB00EE4433 /* FRETypeConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRETypeConverter.h; sourceTree = "<group>"; };
+		21775B2C1C6500CB00EE4433 /* FRETypeConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRETypeConverter.m; sourceTree = "<group>"; };
+		2199BC481C64FA730003B5C1 /* libTenjinIosExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTenjinIosExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2199BC4D1C64FA730003B5C1 /* TenjinIosExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenjinIosExtension.m; sourceTree = "<group>"; };
+		2199BC541C64FAEA0003B5C1 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2199BC451C64FA730003B5C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212E7C361C68901E00848565 /* iAd.framework in Frameworks */,
+				212E7C341C68901400848565 /* StoreKit.framework in Frameworks */,
+				212E7C321C68900D00848565 /* AdSupport.framework in Frameworks */,
+				212E7C301C688F0100848565 /* libTenjinSDKUniversal.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		212E7C2D1C688F0100848565 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				212E7C2E1C688F0100848565 /* libTenjinSDKUniversal.a */,
+				212E7C2F1C688F0100848565 /* TenjinSDK.h */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		2199BC3F1C64FA730003B5C1 = {
+			isa = PBXGroup;
+			children = (
+				2199BC4A1C64FA730003B5C1 /* TenjinIosExtension */,
+				2199BC491C64FA730003B5C1 /* Products */,
+				22A70B300982AC15072FB9C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2199BC491C64FA730003B5C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2199BC481C64FA730003B5C1 /* libTenjinIosExtension.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2199BC4A1C64FA730003B5C1 /* TenjinIosExtension */ = {
+			isa = PBXGroup;
+			children = (
+				212E7C2D1C688F0100848565 /* SDK */,
+				21775B2B1C6500CB00EE4433 /* FRETypeConverter.h */,
+				21775B2C1C6500CB00EE4433 /* FRETypeConverter.m */,
+				2199BC541C64FAEA0003B5C1 /* FlashRuntimeExtensions.h */,
+				2199BC4D1C64FA730003B5C1 /* TenjinIosExtension.m */,
+			);
+			path = TenjinIosExtension;
+			sourceTree = "<group>";
+		};
+		22A70B300982AC15072FB9C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				212E7C351C68901E00848565 /* iAd.framework */,
+				212E7C331C68901400848565 /* StoreKit.framework */,
+				212E7C311C68900D00848565 /* AdSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2199BC471C64FA730003B5C1 /* TenjinIosExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2199BC511C64FA730003B5C1 /* Build configuration list for PBXNativeTarget "TenjinIosExtension" */;
+			buildPhases = (
+				2199BC441C64FA730003B5C1 /* Sources */,
+				2199BC451C64FA730003B5C1 /* Frameworks */,
+				2199BC461C64FA730003B5C1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TenjinIosExtension;
+			productName = TenjinIosExtension;
+			productReference = 2199BC481C64FA730003B5C1 /* libTenjinIosExtension.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2199BC401C64FA730003B5C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Voodoo;
+				TargetAttributes = {
+					2199BC471C64FA730003B5C1 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 2199BC431C64FA730003B5C1 /* Build configuration list for PBXProject "TenjinIosExtension" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2199BC3F1C64FA730003B5C1;
+			productRefGroup = 2199BC491C64FA730003B5C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2199BC471C64FA730003B5C1 /* TenjinIosExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2199BC441C64FA730003B5C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2199BC4E1C64FA730003B5C1 /* TenjinIosExtension.m in Sources */,
+				21775B2D1C6500CB00EE4433 /* FRETypeConverter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2199BC4F1C64FA730003B5C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2199BC501C64FA730003B5C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2199BC521C64FA730003B5C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TenjinIosExtension/SDK",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2199BC531C64FA730003B5C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TenjinIosExtension/SDK",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2199BC431C64FA730003B5C1 /* Build configuration list for PBXProject "TenjinIosExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2199BC4F1C64FA730003B5C1 /* Debug */,
+				2199BC501C64FA730003B5C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2199BC511C64FA730003B5C1 /* Build configuration list for PBXNativeTarget "TenjinIosExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2199BC521C64FA730003B5C1 /* Debug */,
+				2199BC531C64FA730003B5C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2199BC401C64FA730003B5C1 /* Project object */;
+}

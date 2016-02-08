@@ -4,13 +4,13 @@
 	<linkerOptions>
 		<option>-framework StoreKit</option>
 		<option>-framework Tenjin</option>
+		<option>-framework AdSupport</option>
+		<option>-framework iAd</option>
+		<option>-lTenjin</option>
 		
 		<option>-ObjC</option>
 		<option>-all_load</option>
 	</linkerOptions>
 	
-    <packagedDependencies>
-        <packagedDependency>Tenjin.framework</packagedDependency>
-    </packagedDependencies>
 
 </platform>
