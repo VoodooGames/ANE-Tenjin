@@ -301,7 +301,9 @@
         <requestedDisplayResolution>high</requestedDisplayResolution>
     </iPhone>
 <extensions>
-        <extensionID>io.voodoo.Tenjin</extensionID>
-    <extensionID>com.sticksports.nativeExtensions.MoPub</extensionID>
+        
+    
+    
+    <extensionID>io.voodoo.Tenjin</extensionID>
     </extensions>
 </application>

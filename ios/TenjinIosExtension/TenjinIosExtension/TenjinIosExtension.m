@@ -47,7 +47,7 @@ DEFINE_ANE_FUNCTION(tenjin_sendEvent)
     [TenjinSDK sendEventWithName:eventName];
     
     return NULL;
-
+    
 }
 
 DEFINE_ANE_FUNCTION(tenjin_sendEventWithValue)
@@ -93,7 +93,7 @@ void TenjinContextInitializer( void* extData, const uint8_t* ctxType, FREContext
         MAP_FUNCTION(tenjin_sendEventWithValue, NULL),
         MAP_FUNCTION(tenjin_transaction, NULL)
     };
-        
+    
     *numFunctionsToSet = sizeof( mopubFunctionMap ) / sizeof( FRENamedFunction );
 }
 

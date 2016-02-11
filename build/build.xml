@@ -29,9 +29,7 @@
 		<copy todir="../bin/ios">
             <fileset dir="../ios/TenjinIosExtension/TenjinIosExtension/SDK" />
 		</copy>
-
-		<delete dir="../bin/ios/Tenjin.framework/Versions"/>
-
+		
 		<delete dir="../temp" />
 	</target>
 	

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "673CD078DC5A793C4C7BA2E481DC0F9DE99D761B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "64FA732DAAD2A625B04AD115A4A72672BDF85105" : 0,
+    "673CD078DC5A793C4C7BA2E481DC0F9DE99D761B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FF5CEACC-70CA-449D-B111-EB9AB784114A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "64FA732DAAD2A625B04AD115A4A72672BDF85105" : "ANE-Mopub",
+    "673CD078DC5A793C4C7BA2E481DC0F9DE99D761B" : "ANE-Tenjin\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MoPubIosExtension",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/MoPubIosExtension\/MoPubIosExtension.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/StudioCadet\/ANE-Mopub.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "64FA732DAAD2A625B04AD115A4A72672BDF85105"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/VoodooGames\/ANE-Tenjin.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "673CD078DC5A793C4C7BA2E481DC0F9DE99D761B"
+    }
+  ]
+}

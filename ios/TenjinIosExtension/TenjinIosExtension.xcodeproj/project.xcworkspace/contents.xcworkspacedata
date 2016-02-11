@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TenjinIosExtension.xcodeproj">
+      location = "self:/Users/antoinek/Documents/ANE-Tenjin/ios/MoPubIosExtension/TenjinIosExtension.xcodeproj">
    </FileRef>
 </Workspace>
