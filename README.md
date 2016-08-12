@@ -1,7 +1,7 @@
 Air Native Extension for Tenjin on iOS and Android (ARM and x86)
 ==================================
 
-- Tenjin Android SDK version : 1.2.0
+- Tenjin Android SDK version : 1.4.0
 - Tenjin iOS SDK version : 1.2.0
  
 - Add this to your android manifest :
