@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		068781081D5E15D000F318E7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068781071D5E15D000F318E7 /* AdSupport.framework */; };
+		0687810A1D5E15D600F318E7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068781091D5E15D600F318E7 /* StoreKit.framework */; };
 		214D273D1C6C90A7000DCBB1 /* FRETypeConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 214D273B1C6C90A7000DCBB1 /* FRETypeConverter.h */; };
 		214D273E1C6C90A7000DCBB1 /* FRETypeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 214D273C1C6C90A7000DCBB1 /* FRETypeConverter.m */; };
 		21A189D51C6C97030097EC61 /* libTenjinSDKUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A189D31C6C97030097EC61 /* libTenjinSDKUniversal.a */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		015BF4CE1ABB34C700B304B5 /* libTenjinIosExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTenjinIosExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		068781071D5E15D000F318E7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		068781091D5E15D600F318E7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		214D273B1C6C90A7000DCBB1 /* FRETypeConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRETypeConverter.h; sourceTree = "<group>"; };
 		214D273C1C6C90A7000DCBB1 /* FRETypeConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRETypeConverter.m; sourceTree = "<group>"; };
 		21A189D31C6C97030097EC61 /* libTenjinSDKUniversal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTenjinSDKUniversal.a; sourceTree = "<group>"; };
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0687810A1D5E15D600F318E7 /* StoreKit.framework in Frameworks */,
+				068781081D5E15D000F318E7 /* AdSupport.framework in Frameworks */,
 				21A189D51C6C97030097EC61 /* libTenjinSDKUniversal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +66,8 @@
 		79A6D47D1636C14C009DA60A = {
 			isa = PBXGroup;
 			children = (
+				068781091D5E15D600F318E7 /* StoreKit.framework */,
+				068781071D5E15D000F318E7 /* AdSupport.framework */,
 				79A6D48D1636C14D009DA60A /* TenjinIosExtension */,
 				015BF4CE1ABB34C700B304B5 /* libTenjinIosExtension.a */,
 			);
