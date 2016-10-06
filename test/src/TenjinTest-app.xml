@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/16.0">
+<application xmlns="http://ns.adobe.com/air/application/22.0">
 
 <!-- Adobe AIR Application Descriptor File Template.
 
@@ -268,7 +268,7 @@
     <!-- </android> -->
 	<!-- End of the schema for adding the android specific tags in AndroidManifest.xml file -->
 
-<android>
+	<android>
         <manifestAdditions><![CDATA[
 			<manifest android:installLocation="auto">
 			
@@ -300,10 +300,7 @@
 		]]></InfoAdditions>
         <requestedDisplayResolution>high</requestedDisplayResolution>
     </iPhone>
-<extensions>
-        
-    
-    
-    <extensionID>io.voodoo.Tenjin</extensionID>
+	<extensions>
+	    <extensionID>io.voodoo.Tenjin</extensionID>
     </extensions>
 </application>
