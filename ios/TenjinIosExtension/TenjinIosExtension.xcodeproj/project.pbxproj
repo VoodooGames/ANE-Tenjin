@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0665074E1DA6ABDA00C60163 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0665074D1DA6ABDA00C60163 /* iAd.framework */; };
 		068781081D5E15D000F318E7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068781071D5E15D000F318E7 /* AdSupport.framework */; };
 		0687810A1D5E15D600F318E7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068781091D5E15D600F318E7 /* StoreKit.framework */; };
 		214D273D1C6C90A7000DCBB1 /* FRETypeConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 214D273B1C6C90A7000DCBB1 /* FRETypeConverter.h */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		015BF4CE1ABB34C700B304B5 /* libTenjinIosExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTenjinIosExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0665074D1DA6ABDA00C60163 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		068781071D5E15D000F318E7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		068781091D5E15D600F318E7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		214D273B1C6C90A7000DCBB1 /* FRETypeConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRETypeConverter.h; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0665074E1DA6ABDA00C60163 /* iAd.framework in Frameworks */,
 				0687810A1D5E15D600F318E7 /* StoreKit.framework in Frameworks */,
 				068781081D5E15D000F318E7 /* AdSupport.framework in Frameworks */,
 				21A189D51C6C97030097EC61 /* libTenjinSDKUniversal.a in Frameworks */,
@@ -54,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0665074C1DA6ABDA00C60163 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0665074D1DA6ABDA00C60163 /* iAd.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		21A189D21C6C97030097EC61 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +81,7 @@
 				068781071D5E15D000F318E7 /* AdSupport.framework */,
 				79A6D48D1636C14D009DA60A /* TenjinIosExtension */,
 				015BF4CE1ABB34C700B304B5 /* libTenjinIosExtension.a */,
+				0665074C1DA6ABDA00C60163 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
