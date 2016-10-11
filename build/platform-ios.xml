@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<platform xmlns="http://ns.adobe.com/air/extension/16.0">
+<platform xmlns="http://ns.adobe.com/air/extension/23.0">
 
 	<linkerOptions>
 		<option>-framework StoreKit</option>
 		<option>-framework AdSupport</option>
-		<option>-framework iAd</option>
+        <option>-framework iAd</option>
 	</linkerOptions>
+	
 </platform>

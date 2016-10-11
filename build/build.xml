@@ -26,9 +26,6 @@
 		</delete>
 
 		<copy file="../temp/ios/build/Release-iphoneos/lib${name}IosExtension.a" todir="../bin/ios" overwrite="true" />
-		<copy todir="../bin/ios">
-            <fileset dir="../ios/TenjinIosExtension/TenjinIosExtension/SDK" />
-		</copy>
 		
 		<delete dir="../temp" />
 	</target>

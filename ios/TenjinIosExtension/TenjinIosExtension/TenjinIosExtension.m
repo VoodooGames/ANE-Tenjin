@@ -6,63 +6,54 @@
 //  Copyright © 2016 Voodoo. All rights reserved.
 //
 
-
-
 #import <Foundation/Foundation.h>
 #import "FlashRuntimeExtensions.h"
 #import "FRETypeConverter.h"
 #import "TenjinSDK.h"
 
-#define DEFINE_ANE_FUNCTION(fn) FREObject (fn)(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
-
-#define MAP_FUNCTION(fn, data) { (const uint8_t*)(#fn), (data), &(fn) }
-
 FRETypeConverter* typeConverter;
 
-DEFINE_ANE_FUNCTION(tenjin_init)
+FREObject tenjin_init(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
 {
-    NSLog(@"Initializing Tenjin extension ...");
-    
     NSString* token;
-    
     [typeConverter FREGetObject:argv[0] asString:&token];
     
+    NSLog(@"Initializing Tenjin extension with token : %@ ...", token);
     [TenjinSDK sharedInstanceWithToken:token];
     
-    return NULL;
+    return nil;
 }
 
-DEFINE_ANE_FUNCTION(tenjin_appActivated)
+FREObject tenjin_appActivated(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
 {
-    return NULL;
+    return nil;
 }
 
-DEFINE_ANE_FUNCTION(tenjin_sendEvent)
+FREObject tenjin_sendEvent(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
 {
     NSString* eventName;
     [typeConverter FREGetObject:argv[0] asString:&eventName];
     
     NSLog(@"Sending Tenjin event %@", eventName);
-    
     [TenjinSDK sendEventWithName:eventName];
     
-    return NULL;
-    
+    return nil;
 }
-
-DEFINE_ANE_FUNCTION(tenjin_sendEventWithValue)
+    
+FREObject tenjin_sendEventWithValue(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
 {
     NSString* eventName;
     NSString* eventValue;
     [typeConverter FREGetObject:argv[0] asString:&eventName];
     [typeConverter FREGetObject:argv[1] asString:&eventValue];
     
+    NSLog(@"Sending Tenjin event %@ with value %@", eventName, eventValue);
     [TenjinSDK sendEventWithName:eventName andEventValue:eventValue];
     
-    return NULL;
+    return nil;
 }
 
-DEFINE_ANE_FUNCTION(tenjin_transaction)
+FREObject tenjin_transaction(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
 {
     NSString* productName;
     NSString* currencyCode;
@@ -74,9 +65,10 @@ DEFINE_ANE_FUNCTION(tenjin_transaction)
     [typeConverter FREGetObject:argv[2] asInt:&quantity];
     [typeConverter FREGetObject:argv[3] asDouble:&unitPrice];
     
+    NSLog(@"Sending transaction : %d x %@ @ %.2f %@", quantity, productName, unitPrice, currencyCode);
     [TenjinSDK transactionWithProductName:productName andCurrencyCode:currencyCode andQuantity:quantity andUnitPrice:[[NSDecimalNumber alloc] initWithDouble:unitPrice]];
     
-    return NULL;
+    return nil;
 }
 
 
@@ -86,15 +78,32 @@ DEFINE_ANE_FUNCTION(tenjin_transaction)
 
 void TenjinContextInitializer( void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToSet, const FRENamedFunction** functionsToSet )
 {
-    static FRENamedFunction mopubFunctionMap[] =
-    {
-        MAP_FUNCTION(tenjin_init, NULL),
-        MAP_FUNCTION(tenjin_appActivated, NULL),
-        MAP_FUNCTION(tenjin_sendEventWithValue, NULL),
-        MAP_FUNCTION(tenjin_transaction, NULL)
-    };
+    *numFunctionsToSet = 5;
+    NSLog(@"Setting %d extension functions ...", *numFunctionsToSet);
     
-    *numFunctionsToSet = sizeof( mopubFunctionMap ) / sizeof( FRENamedFunction );
+    FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * (*numFunctionsToSet));
+    
+    func[0].name = (const uint8_t*) "tenjin_init";
+    func[0].functionData = NULL;
+    func[0].function = &tenjin_init;
+    
+    func[1].name = (const uint8_t*) "tenjin_appActivated";
+    func[1].functionData = NULL;
+    func[1].function = &tenjin_appActivated;
+    
+    func[2].name = (const uint8_t*) "tenjin_sendEvent";
+    func[2].functionData = NULL;
+    func[2].function = &tenjin_sendEvent;
+    
+    func[3].name = (const uint8_t*) "tenjin_sendEventWithValue";
+    func[3].functionData = NULL;
+    func[3].function = &tenjin_sendEventWithValue;
+    
+    func[4].name = (const uint8_t*) "tenjin_transaction";
+    func[4].functionData = NULL;
+    func[4].function = &tenjin_transaction;
+    
+    *functionsToSet = func;
 }
 
 void TenjinContextFinalizer( FREContext ctx )

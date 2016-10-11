@@ -4,7 +4,6 @@ package {
 	import flash.text.TextField;
 	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
-	import flash.utils.getTimer;
 	
 	import io.voodoo.tenjin.Tenjin;
 	

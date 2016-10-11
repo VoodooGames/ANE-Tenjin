@@ -10,3 +10,6 @@ test/bin-debug
 /android/Tenjin.iml
 /android/.idea
 /android/out
+test/.idea
+test/out
+test/test.iml
